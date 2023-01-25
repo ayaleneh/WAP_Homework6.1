@@ -13,6 +13,16 @@ function sumOfArray(array) {
     //console.log("sum of array: " + result);
     return result;
 }
+
+describe("Array Sum: ", ()=> {
+
+    it("it will sum  element in the given array", ()=> {
+      assert.equal(sumOfArray([1, 2, 3, 4]), 10);
+      assert.equal(sumOfArray([2, 3, 5, 6]), 16);
+    });
+  
+  });
+
 console.log("Expected output of sumOfArray(1,2,3,4) is 10 " +
     myFunctionTest(10, sumOfArray([1, 2, 3, 4])))
 console.assert(sumOfArray([1, 2, 3, 4])==10,"Test failed!")
@@ -25,6 +35,15 @@ function multiplicationOfArray(array) {
     return result;
 }
 
+describe("Array Multiply: ", ()=> {
+
+    it("it will multiply element in the given array", ()=> {
+      assert.equal(multiplicationOfArray([5, 2, 3, 4]), 120);
+      assert.equal(multiplicationOfArray([10, 2, 3, 4]), 240);
+    });
+  
+  });
+
 console.log("Expected output of multiplicationOfArray(5,2,3,4) is 120 " +
     myFunctionTest(120, multiplicationOfArray([5, 2, 3, 4])))
 console.assert(multiplicationOfArray([5, 2, 3, 4]) == 120, "Test failed!")
@@ -35,6 +54,14 @@ function reverseString(string) {
     return result;
 }
 
+describe("String Reverse: ", () => {
+
+    it("it will reverse a given a string", () => {
+        assert.equal((reverseString("jag testar")), "ratset gaj");
+       // assert.equal(multiplicationOfArray([10, 2, 3, 4]), 240);
+    });
+
+});
 
 console.log("Expected output of reverseString(jag testar) is ratset gaj " +
     myFunctionTest("ratset gaj", reverseString("jag testar")));
@@ -47,4 +74,12 @@ function filterLongWord(arrayword, num) {
     return newarray;
 
 }
+
+describe("Filter Long Word: ", () => {
+    it("the program will filter longest word from a given String: ", () => {
+        assert.equal(filterLongWord(["john", "alex", "martha", "Gize", "Ab"], 3), ['john', 'alex', 'martha', 'Gize']);
+        // assert.equal(multiplicationOfArray([10, 2, 3, 4]), 240);
+    });
+
+});
 console.log(filterLongWord(["john", "alex", "martha", "Gize", "Ab"], 3));
